@@ -1,0 +1,196 @@
+f=open("abc.txt","w")
+f.close
+
+f=open("janu.txt","w")
+a=["hi\n",
+   "welcome\n",
+   "to\n",
+   "everyone\n",
+   "gud mng\n"]
+f.writelines(a)
+f.close()
+
+
+
+
+f=open("janu.txt","r")
+print(f.read())
+f.close()
+
+
+
+f=open("janu.txt","r")
+n=int(input("number of lines: "))
+for i in range(n):
+    line=f.readline()
+    print(line)
+f.close()
+
+f=open("janu.txt","w")
+f.write("i am appending string to the text file")
+f.close()
+
+
+
+f=open("janu.txt","r")
+print(f.read())
+f.close()
+
+
+
+
+f=open("file1.txt","w")
+list=["gud\n",
+     "mng\n",
+     "janu",
+      "i",
+      "am",
+      "python"]
+f.writelines(list)
+f.close()
+f=open("file1.txt","r")
+print(f.read())
+f.close
+
+
+
+
+def lastnlines(fname,n):
+    with open(fname) as file:
+        for line in (file.readlines() [-n:]):
+            print(line, end ="")
+name=input("enter a file name: ") 
+n=int(input("no of last lines: "))
+try:
+    lastnlines(name,n)
+except:
+    print("file not found")
+
+
+
+
+
+def read(a):
+      with open (a) as file:
+        cse=file.readlines()
+a=input("enter a file name: ")
+read(a)
+
+
+
+
+def file_read(fname):
+        content_array = []
+        with open(fname) as f:
+                #Content_list is the list that contains the read lines.     
+                for line in f:
+                        content_array.append(line)
+                print(content_array)
+
+file_read('file1.txt')
+
+
+
+
+
+file = open("file1.txt","r") 
+Counter = 0
+  
+# Reading from file 
+Content = file.read() 
+CoList = Content.split("\n") 
+  
+for i in CoList: 
+    if i: 
+        Counter += 1
+          
+print("This is the number of lines in the file") 
+print(Counter)
+
+
+
+def file_size(fname):
+        import os
+        statinfo = os.stat(fname)
+        return statinfo.st_size
+
+print("File size in bytes of a plain file: ",file_size("file1.txt"))
+
+
+
+
+list=[1,2,3,4]
+print(sum(list))
+print(list)
+
+
+
+l1=[1,2,3,7]
+print(max(l1))
+print(min(l2))
+
+
+l1=[1,4,3,3,1,8,9,9,2,2]
+before=None
+l2=[]
+for i in l1:
+    if i!=before:
+        l2.append(i)
+        before=i
+print(l1)
+print(l2)
+
+
+
+
+list=["red","green","white","black","pink","yello"]
+print(list)
+print(list[1:4])
+
+
+
+
+list=[1,2,3,4]
+tot=1
+for elem in list:
+    tot*=elem
+print(tot)
+print(list)
+
+
+
+
+l1=[]
+l2=[1,2,3,4]
+if l1==l2:
+    print("list is empty")
+else:
+    print("list is not empty")
+
+
+
+
+l2=[1,2,3,4,5]
+l2*2
+
+
+
+from random import shuffle
+list=["hii","hello","good","evening"]
+shuffle(list)
+print(list)
+
+
+
+
+k1=[1,2,3,4,5]
+k2=[1,2,3,5,7]
+diff=list(set(k1)-set(k2))
+print(diff)
+
+
+
+
+num = [7,8, 120, 25, 44, 20, 27]
+num = [x for x in num if x%2!=0]
+print(num)
